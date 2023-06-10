@@ -1,5 +1,39 @@
+@font-face {
+  font-family: "epilogue";
+  src: url("/src/assets/fonts/Epilogue/Epilogue-Light.woff2") format("woff2"), url("/src/assets/fonts/Epilogue/Epilogue-Light.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "grotesk";
+  src: url("/src/assets/fonts/FamiljenGrotesk/FamiljenGrotesk-Light.woff2") format("woff2"), url("/src/assets/fonts/FamiljenGrotesk/FamiljenGrotesk-Light.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "crimson-pro";
+  src: url("/src/assets/fonts/crimson/CrimsonPro-ExtraLight.woff2") format("woff2"), url("/src/assets/fonts/crimson/CrimsonPro-ExtraLight.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "crimson-pro";
+  font-style: italic;
+  src: url("/src/assets/fonts/crimson/CrimsonPro-ExtraLightitalic.woff2") format("woff2"), url("/src/assets/fonts/crimson/CrimsonPro-ExtraLightitalic.woff") format("woff");
+  font-display: swap;
+}
 * {
+  margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+:root {
+  --black: #000000;
+  --black-lighten: #141414;
+  --white: #FFFFFF;
+  --green: #72FF71;
+  --yellow: #F8FB02;
+  --cyan: #02FFFF;
+  --red: #E92A7A;
 }
 
 /*# sourceMappingURL=main.css.map */
