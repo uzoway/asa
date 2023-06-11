@@ -7,8 +7,15 @@
 
 @font-face {
     font-family: "grotesk";
-    src: url("/src/assets/fonts/FamiljenGrotesk/FamiljenGrotesk-Light.woff2") format("woff2"),
-         url("/src/assets/fonts/FamiljenGrotesk/FamiljenGrotesk-Light.woff") format("woff");
+    src: url("/src/assets/fonts/FamiljenGrotesk/FamiljenGrotesk-Bold.woff2") format("woff2"),
+         url("/src/assets/fonts/FamiljenGrotesk/FamiljenGrotesk-Bold.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "cabinet-grotesk";
+    src: url("/src/assets/fonts/FamiljenGrotesk/CabinetGrotesk-Extralight.woff2") format("woff2"),
+         url("/src/assets/fonts/FamiljenGrotesk/CabinetGrotesk-Extralight.woff") format("woff");
     font-display: swap;
 }
 
@@ -42,4 +49,7 @@
     --yellow: #F8FB02;
     --cyan: #02FFFF;
     --red: #E92A7A;
+    --hot-pink: #FF69B4;
+    --dark-red: #FF0000;
+    --purple: #800080;
 }
