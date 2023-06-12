@@ -280,6 +280,7 @@
         width: 100%;
         @include flex-content(flex, space-between, center);
         padding: 0 1.5rem 1rem;
+        z-index: 2;
 
         @media (max-width: 595px) {
             @include flex-content(flex, null, flex-start);
