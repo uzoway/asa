@@ -91,6 +91,7 @@
         .navigation__list {
             display: flex;
             will-change: transform;
+            z-index: 2;
 
             @media (max-width: 1074px) {
                 flex-direction: column;
