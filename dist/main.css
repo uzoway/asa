@@ -69,7 +69,7 @@
   height: 200vh;
   width: 100%;
   color: var(--white);
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.493);
   padding: 1rem 1.5rem;
   position: relative;
 }
@@ -91,7 +91,7 @@
   z-index: 2;
 }
 .hero__navigation--logoImage {
-  transform: scale(0.5);
+  transform: scale(0.2);
   transform-origin: 0 0;
 }
 @media (max-width: 1074px) {
@@ -126,6 +126,7 @@
 }
 .hero__navigation .navigation__list {
   display: flex;
+  will-change: transform;
 }
 @media (max-width: 1074px) {
   .hero__navigation .navigation__list {
@@ -187,12 +188,28 @@
 .hero__heading {
   margin-top: 2rem;
   font-family: crimson-pro;
-  font-size: clamp(0.9rem, 2vw, 1.5rem);
   font-weight: 500;
+  overflow: hidden;
+}
+.hero__heading--text {
+  font-size: clamp(0.9rem, 2vw, 1.5rem);
+  display: inline-block;
+  will-change: transform;
 }
 .hero__videoPreview {
-  margin: 40vh 0 0 auto;
+  margin: 25vh 0 0 auto;
   width: 18vw;
+}
+@media (max-width: 1075px) {
+  .hero__videoPreview {
+    margin: 15vh 0 0 auto;
+    width: 28vw;
+  }
+}
+@media (max-width: 1071px) {
+  .hero__videoPreview {
+    margin: 28vh 0 0 auto;
+  }
 }
 @media (max-width: 1051px) {
   .hero__videoPreview {
@@ -206,7 +223,7 @@
 }
 @media (max-width: 873px) {
   .hero__videoPreview {
-    margin: 45vh 0 0 auto;
+    margin: 30vh 0 0 auto;
   }
 }
 @media (max-width: 811px) {
@@ -216,12 +233,17 @@
 }
 @media (max-width: 659px) {
   .hero__videoPreview {
-    margin: 57vh 0 0 auto;
+    margin: 43vh 0 0 auto;
   }
 }
 @media (max-width: 563px) {
   .hero__videoPreview {
     width: 39vw;
+  }
+}
+@media (max-width: 503px) {
+  .hero__videoPreview {
+    margin: 48vh 0 0 auto;
   }
 }
 @media (max-width: 487px) {
@@ -236,12 +258,12 @@
 }
 @media (max-width: 423px) {
   .hero__videoPreview {
-    margin: 62vh 0 0 auto;
+    margin: 48vh 0 0 auto;
   }
 }
 @media (max-width: 413px) {
   .hero__videoPreview {
-    margin: 65vh 0 0 auto;
+    margin: 50vh 0 0 auto;
   }
 }
 @media (max-width: 385px) {
@@ -265,6 +287,7 @@
   font-size: clamp(0.9rem, 3vw, 1.25rem);
   font-weight: 900;
   letter-spacing: 0.5px;
+  will-change: transform;
 }
 .hero__videoPreview .hero__videoContainer {
   width: 100%;
@@ -274,6 +297,11 @@
   margin-top: 1rem;
   position: relative;
   cursor: pointer;
+}
+@media (max-width: 1075px) {
+  .hero__videoPreview .hero__videoContainer {
+    height: 19vh;
+  }
 }
 @media (max-width: 1051px) {
   .hero__videoPreview .hero__videoContainer {
