@@ -8,7 +8,7 @@
 
 .preloader {
     position: fixed;
-    top: -100vh;
+    top: 0vh;
     left: 0;
     width: 100vw;
     height: 100vh;
@@ -26,18 +26,30 @@
     height: 200vh;
     width: 100%;
     color: var(--white);
-    background: var(--red);
-    background: url("https://res.cloudinary.com/dp20bvzhn/image/upload/e_contrast:0/v1686335126/asa/Rectangle_1_cwocbk.webp") no-repeat 50% 50%;
-    background-size: cover;
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
     padding: 1rem 1.5rem;
     position: relative;
+
+    &__bgImage {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        object-fit: cover;
+    }
 
     &__navigation {
         @include flex-content(flex, space-between, start);
 
         &--logoLink {
             z-index: 2;
+        }
+
+        &--logoImage {
+            transform: scale(0.5);
+            transform-origin: 0 0;
         }
 
         @media (max-width: 1074px) {
