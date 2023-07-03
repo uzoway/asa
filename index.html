@@ -25,7 +25,7 @@
 
         <!-- Hero section -->
         <div class="hero">
-            <img class="hero__bgImage" fetchpriority="high" src="https://res.cloudinary.com/dp20bvzhn/image/upload/e_contrast:0/v1686335126/asa/Rectangle_1_cwocbk.webp" alt="picture of asa for the background image">
+            <img class="hero__bgImage cld-responsive img-responsive" fetchpriority="high" data-src="https://res.cloudinary.com/dp20bvzhn/image/upload/q_auto,f_auto,w_auto,dpr_auto,c_limit/e_contrast:0/v1686335126/asa/Rectangle_1_cwocbk.webp" alt="picture of asa used as the background image">
             
             <nav class="hero__navigation">
                 <a href="#" class="hero__navigation--logoLink"><img class="hero__navigation--logoImage" src="https://res.cloudinary.com/dp20bvzhn/image/upload/v1686335116/asa/Assa_logo_bigg_zybysn.webp" alt="asa logo"></a>
@@ -75,6 +75,8 @@
         </div>
     </main>
 
+    <!-- Cloudinary core library -->
+    <script src="https://unpkg.com/cloudinary-core@latest/cloudinary-core-shrinkwrap.js"></script>
 
     <!-- GSAP core, Flip, scrolltrigger and text plugin CDN  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>

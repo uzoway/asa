@@ -1,5 +1,11 @@
+// Calling the cloudinary responsive method
+var cl = cloudinary.Cloudinary.new({cloud_name: "dp20bvzhn"}); 
+cl.responsive();
+
+
 // Register scrolltrigger plugin
 gsap.registerPlugin(ScrollTrigger);
+
 
 // initialize and set up Lenis smooth scroll
 const lenis = new Lenis({
@@ -15,7 +21,9 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
-function init() {
+
+// Function to run the gsap animations only when the page is done loading
+function initializeAnimations() {
     // Hero animation using matchmedia
     let mm = gsap.matchMedia();
 
@@ -64,6 +72,6 @@ function init() {
 
 
 
-window.addEventListener("load", init);
+window.addEventListener("load", initializeAnimations);
 
 
