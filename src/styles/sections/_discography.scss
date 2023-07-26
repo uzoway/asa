@@ -1,0 +1,110 @@
+@use "../config/config" as *;
+
+.disco {
+    min-height: 100vh;
+    background: url("https://res.cloudinary.com/dp20bvzhn/image/upload/v1686334100/asa/Rectangle_7_b7tsjx.webp") 50% 50% no-repeat;
+    @include flex-content(flex, center, center);
+
+    .wrapper {
+        width: 50%;
+        // background-color: red;
+        text-align: center;
+        color: var(--white);
+        margin: 12rem 0 0;
+
+        @media (max-width: 698px) {
+            margin: 7rem 0 0;
+        }
+
+        &__heading {
+            text-transform: uppercase;
+            margin-bottom: .6rem;
+            font-family: cabinet-grotesk;
+            font-size: clamp(.9rem, 2.8vw, 6rem);
+        }
+
+        &__paragraph,
+        .cover__year {
+            font-size: clamp(.8rem, 1.3vw, 1.3rem);
+            font-family: crimson-pro;
+        }
+
+        .cover {
+            margin: 11rem 0;
+            position: relative;
+
+            @media (max-width: 698px) {
+                margin: 7rem 0;
+            }
+
+            &__year {
+                position: absolute;
+                left: -18vw;
+                top: 1.5rem;
+            }
+
+            &__details {
+                position: absolute;
+                top: 35%;
+                transform: translateY(-50%);
+                right: -4rem;
+                text-align: left;
+
+                @media (max-width: 336px) {
+                    right: -3rem;
+                }
+
+                &--title {
+                    text-transform: uppercase;
+                    font-family: grotesk;
+                    font-size: clamp(1.2rem, 3vw, 2rem);
+                }
+
+                &--song {
+                    font-family: cabinet-grotesk;
+                    text-transform: uppercase;
+                    font-size: clamp(.8rem, 1.2vw, 1rem);
+                }
+            }
+
+            &__image {
+                width: 100%;
+                overflow: hidden;
+
+                img {
+                    max-width: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &__platform {
+                @include flex-content(flex, null, null);
+                margin-top: 1rem;
+
+                .list__item {
+                    list-style: none;
+                    margin-right: .5rem;
+
+                    &--link {
+                        text-decoration: none;
+
+                        img {
+                            width: 1.7rem;
+
+                            @media (max-width: 386px) {
+                                width: 1.2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &__bottomParagraph {
+            font-family: cabinet-grotesk;
+            text-transform: uppercase;
+            font-size: clamp(.8rem, 1.2vw, 1rem);
+            margin-bottom: 1rem;
+        }
+    }
+}

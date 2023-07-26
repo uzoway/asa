@@ -695,4 +695,103 @@
   margin-top: 2rem;
 }
 
+.disco {
+  min-height: 100vh;
+  background: url("https://res.cloudinary.com/dp20bvzhn/image/upload/v1686334100/asa/Rectangle_7_b7tsjx.webp") 50% 50% no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.disco .wrapper {
+  width: 50%;
+  text-align: center;
+  color: var(--white);
+  margin: 12rem 0 0;
+}
+@media (max-width: 698px) {
+  .disco .wrapper {
+    margin: 7rem 0 0;
+  }
+}
+.disco .wrapper__heading {
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+  font-family: cabinet-grotesk;
+  font-size: clamp(0.9rem, 2.8vw, 6rem);
+}
+.disco .wrapper__paragraph,
+.disco .wrapper .cover__year {
+  font-size: clamp(0.8rem, 1.3vw, 1.3rem);
+  font-family: crimson-pro;
+}
+.disco .wrapper .cover {
+  margin: 11rem 0;
+  position: relative;
+}
+@media (max-width: 698px) {
+  .disco .wrapper .cover {
+    margin: 7rem 0;
+  }
+}
+.disco .wrapper .cover__year {
+  position: absolute;
+  left: -18vw;
+  top: 1.5rem;
+}
+.disco .wrapper .cover__details {
+  position: absolute;
+  top: 35%;
+  transform: translateY(-50%);
+  right: -4rem;
+  text-align: left;
+}
+@media (max-width: 336px) {
+  .disco .wrapper .cover__details {
+    right: -3rem;
+  }
+}
+.disco .wrapper .cover__details--title {
+  text-transform: uppercase;
+  font-family: grotesk;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+}
+.disco .wrapper .cover__details--song {
+  font-family: cabinet-grotesk;
+  text-transform: uppercase;
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
+}
+.disco .wrapper .cover__image {
+  width: 100%;
+  overflow: hidden;
+}
+.disco .wrapper .cover__image img {
+  max-width: 100%;
+  object-fit: cover;
+}
+.disco .wrapper .cover__platform {
+  display: flex;
+  margin-top: 1rem;
+}
+.disco .wrapper .cover__platform .list__item {
+  list-style: none;
+  margin-right: 0.5rem;
+}
+.disco .wrapper .cover__platform .list__item--link {
+  text-decoration: none;
+}
+.disco .wrapper .cover__platform .list__item--link img {
+  width: 1.7rem;
+}
+@media (max-width: 386px) {
+  .disco .wrapper .cover__platform .list__item--link img {
+    width: 1.2rem;
+  }
+}
+.disco .wrapper__bottomParagraph {
+  font-family: cabinet-grotesk;
+  text-transform: uppercase;
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
+  margin-bottom: 1rem;
+}
+
 /*# sourceMappingURL=main.css.map */
