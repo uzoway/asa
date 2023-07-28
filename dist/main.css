@@ -14,6 +14,12 @@
   font-display: swap;
 }
 @font-face {
+  font-family: "cabinet-grotesk";
+  src: url("/src/assets/fonts/FamiljenGrotesk/CabinetGrotesk-Medium.woff2") format("woff2"), url("/src/assets/fonts/FamiljenGrotesk/CabinetGrotesk-Medium.woff") format("woff");
+  font-display: swap;
+  font-weight: 400;
+}
+@font-face {
   font-family: "crimson-pro";
   src: url("/src/assets/fonts/crimson/CrimsonPro-ExtraLight.woff2") format("woff2"), url("/src/assets/fonts/crimson/CrimsonPro-ExtraLight.woff") format("woff");
   font-display: swap;
@@ -899,6 +905,87 @@
 .excerpts .wrapper .bottom__container .top__wrapper .text__container4, .excerpts .wrapper .bottom__container .bottom__wrapper .text__container4 {
   background-color: var(--red);
   transform: rotate(-6deg);
+}
+
+.tickets {
+  min-height: 100vh;
+  background: url("https://res.cloudinary.com/dp20bvzhn/image/upload/v1686333987/asa/Group_595_lvxxmo.webp") 50% 50% no-repeat;
+  padding: 2rem 0 1rem;
+}
+.tickets .wrapper {
+  padding: 3rem 1rem;
+  color: var(--white);
+}
+@media (max-width: 460px) {
+  .tickets .wrapper {
+    padding: 3rem 0.5rem;
+  }
+}
+.tickets .wrapper .wrapper__paragraph {
+  text-transform: uppercase;
+  text-align: center;
+  font-family: cabinet-grotesk;
+  font-size: clamp(0.8rem, 1.3vw, 1.1rem);
+}
+.tickets .wrapper table {
+  width: 100%;
+}
+.tickets .wrapper table .table__caption {
+  font-size: clamp(0.55rem, 6.3vw, 9rem);
+  font-family: cabinet-grotesk;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-bottom: 4rem;
+}
+.tickets .wrapper table .table__caption span {
+  font-size: clamp(0.55rem, 6vw, 9rem);
+  font-family: crimson-pro;
+  font-weight: 400;
+}
+.tickets .wrapper table tr {
+  border-top: 1px solid var(--white);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2.5rem 0;
+  text-transform: uppercase;
+}
+@media (max-width: 460px) {
+  .tickets .wrapper table tr {
+    padding: 1.5rem 0;
+  }
+}
+.tickets .wrapper table tr .date {
+  font-family: crimson-pro;
+  font-size: clamp(0.6rem, 5vw, 7rem);
+  display: flex;
+  align-items: flex-start;
+  line-height: 0.65;
+  flex-basis: 17%;
+}
+.tickets .wrapper table tr .date span {
+  font-family: cabinet-grotesk;
+  font-size: clamp(0.55rem, 1.2vw, 1.4rem);
+}
+.tickets .wrapper table tr .category,
+.tickets .wrapper table tr .location {
+  font-family: cabinet-grotesk;
+  font-size: clamp(0.5rem, 1.2vw, 1.4rem);
+  flex-basis: 19%;
+}
+.tickets .wrapper table tr .category {
+  display: flex;
+  justify-content: flex-end;
+}
+.tickets .wrapper table tr .album {
+  font-size: clamp(0.55rem, 4vw, 6rem);
+  line-height: 0.9;
+  font-family: cabinet-grotesk;
+  font-weight: lighter;
+  white-space: pre-wrap;
+  text-align: left;
+  flex-basis: 41%;
 }
 
 /*# sourceMappingURL=main.css.map */

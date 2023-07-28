@@ -1,0 +1,88 @@
+@use "../config/config" as *;
+
+.tickets {
+    min-height: 100vh;
+    background: url("https://res.cloudinary.com/dp20bvzhn/image/upload/v1686333987/asa/Group_595_lvxxmo.webp") 50% 50% no-repeat;
+    padding: 2rem 0 1rem;
+
+    .wrapper {
+        padding: 3rem 1rem;
+        color: var(--white);
+        
+        @media (max-width: 460px) {
+            padding: 3rem .5rem;
+        }
+
+        .wrapper__paragraph {
+            text-transform: uppercase;
+            text-align: center;
+            font-family: cabinet-grotesk;
+            font-size: clamp(.8rem, 1.3vw, 1.1rem);
+        }
+
+        table {
+            width: 100%;
+
+            .table__caption {
+                font-size: clamp(.55rem, 6.3vw, 9rem);
+                font-family: cabinet-grotesk;
+                text-transform: uppercase;
+                white-space: nowrap;
+                margin-bottom: 4rem;
+
+
+                span {
+                    font-size: clamp(.55rem, 6vw, 9rem);
+                    font-family: crimson-pro;
+                    font-weight: 400;
+                }
+            }
+
+            tr {
+                border-top: 1px solid var(--white);
+                width: 100%;
+                @include flex-content(flex, space-between, flex-start);
+                padding: 2.5rem 0;
+                text-transform: uppercase;
+
+                @media (max-width: 460px) {
+                    padding: 1.5rem 0;
+                }
+
+                .date {
+                    font-family: crimson-pro;
+                    font-size: clamp(.6rem, 5vw, 7rem);
+                    @include flex-content(flex, null, flex-start);
+                    line-height: .65;
+                    flex-basis: 17%;
+
+                    span {
+                        font-family: cabinet-grotesk;
+                        font-size: clamp(.55rem, 1.2vw, 1.4rem);
+                    }
+                }
+
+                .category,
+                .location {
+                    font-family: cabinet-grotesk;
+                    font-size: clamp(.5rem, 1.2vw, 1.4rem);
+                    flex-basis: 19%;
+                }
+
+                .category {
+                    @include flex-content (flex, flex-end, null);
+                }
+
+                .album {
+                    font-size: clamp(.55rem, 4vw, 6rem);
+                    line-height: .9;
+                    font-family: cabinet-grotesk;
+                    font-weight: lighter;
+                    white-space: pre-wrap;
+                    text-align: left;
+                    flex-basis: 41%;
+                }
+            }
+        }
+    }
+}
