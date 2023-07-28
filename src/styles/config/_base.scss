@@ -20,6 +20,14 @@
 }
 
 @font-face {
+    font-family: "cabinet-grotesk";
+    src: url("/src/assets/fonts/FamiljenGrotesk/CabinetGrotesk-Medium.woff2") format("woff2"),
+         url("/src/assets/fonts/FamiljenGrotesk/CabinetGrotesk-Medium.woff") format("woff");
+    font-display: swap;
+    font-weight: 400;
+}
+
+@font-face {
     font-family: "crimson-pro";
     src: url("/src/assets/fonts/crimson/CrimsonPro-ExtraLight.woff2") format("woff2"),
          url("/src/assets/fonts/crimson/CrimsonPro-ExtraLight.woff") format("woff");
