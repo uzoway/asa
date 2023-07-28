@@ -1,0 +1,113 @@
+@use "../config/config" as *;
+
+.excerpts {
+    min-height: 100vh;
+    padding: 1.5rem 1rem;
+    overflow: hidden;
+    width: 100%;
+
+    .wrapper {
+        @include flex-content(flex, space-between, null);
+        flex-direction: column;
+
+        .top__container {
+            width: 100%;
+
+            &--heading {
+                @include flex-content(flex, space-between, center);
+                text-transform: uppercase;
+                font-family: epilogue;
+
+                span {
+                    display: inline-block;
+                    font-size: clamp(1rem, 2.3vw, 5.6rem);
+                }
+            }
+        }
+
+        .bottom__container {
+            margin: 20rem 0 2.5rem;
+
+            @media (max-width: 686px) {
+                margin: 11rem 0 2rem;
+            }
+
+            .top__wrapper, .bottom__wrapper {
+                @include flex-content(flex, space-between, center);
+
+                @media (max-width: 598px) {
+                    flex-wrap: wrap;
+                }
+
+                .image__container {
+                    flex-basis: 49%;
+                    overflow: hidden;
+
+                    img {
+                        max-width: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .image__container:nth-child(1),
+                .image__container:nth-child(3) {
+                    z-index: 1;
+                }
+
+                .image__container2 {
+                    @include flex-content(flex, flex-end, null);
+                }
+
+                .text__container {
+                    padding: 2.5rem 1.8rem;
+                    flex-basis: 50%;
+
+                    @media (max-width: 756px) {
+                        padding: 1.5rem .8rem;
+                    }
+
+                    @media (max-width: 598px) {
+                        flex-basis: 49%;
+                    }
+
+                    &--heading {
+                        font-size: clamp(1rem, 2.5vw, 5.7rem);
+                        text-transform: uppercase;
+                        font-family: epilogue;
+                        margin-bottom: 6rem;
+
+                        @media (max-width: 756px) {
+                            margin-bottom: 3rem;
+                        }
+                    }
+
+                    &--paragraph {
+                        font-size: clamp(.8rem, 1.7vw, 5rem);
+                        text-transform: uppercase;
+                        font-family: crimson-pro;
+                    }
+                }
+
+                .text__container1 {
+                    background-color: var(--yellow);
+                    transform: translateX(10%) rotate(20deg);
+                }
+
+                .text__container2 {
+                    background-color: var(--cyan);
+                    transform: rotate(1.5deg);
+                }
+
+                .text__container3 {
+                    background-color: var(--green);
+                    transform: translateY(-25%) rotate(-10deg);
+                }
+
+                .text__container4 {
+                    background-color: var(--red);
+                    transform: rotate(-6deg);
+                }
+            }
+        }
+    }
+}

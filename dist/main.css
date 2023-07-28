@@ -794,4 +794,111 @@
   margin-bottom: 1rem;
 }
 
+.excerpts {
+  min-height: 100vh;
+  padding: 1.5rem 1rem;
+  overflow: hidden;
+  width: 100%;
+}
+.excerpts .wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.excerpts .wrapper .top__container {
+  width: 100%;
+}
+.excerpts .wrapper .top__container--heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: epilogue;
+}
+.excerpts .wrapper .top__container--heading span {
+  display: inline-block;
+  font-size: clamp(1rem, 2.3vw, 5.6rem);
+}
+.excerpts .wrapper .bottom__container {
+  margin: 20rem 0 2.5rem;
+}
+@media (max-width: 686px) {
+  .excerpts .wrapper .bottom__container {
+    margin: 11rem 0 2rem;
+  }
+}
+.excerpts .wrapper .bottom__container .top__wrapper, .excerpts .wrapper .bottom__container .bottom__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 598px) {
+  .excerpts .wrapper .bottom__container .top__wrapper, .excerpts .wrapper .bottom__container .bottom__wrapper {
+    flex-wrap: wrap;
+  }
+}
+.excerpts .wrapper .bottom__container .top__wrapper .image__container, .excerpts .wrapper .bottom__container .bottom__wrapper .image__container {
+  flex-basis: 49%;
+  overflow: hidden;
+}
+.excerpts .wrapper .bottom__container .top__wrapper .image__container img, .excerpts .wrapper .bottom__container .bottom__wrapper .image__container img {
+  max-width: 100%;
+  object-fit: cover;
+}
+.excerpts .wrapper .bottom__container .top__wrapper .image__container:nth-child(1),
+.excerpts .wrapper .bottom__container .top__wrapper .image__container:nth-child(3), .excerpts .wrapper .bottom__container .bottom__wrapper .image__container:nth-child(1),
+.excerpts .wrapper .bottom__container .bottom__wrapper .image__container:nth-child(3) {
+  z-index: 1;
+}
+.excerpts .wrapper .bottom__container .top__wrapper .image__container2, .excerpts .wrapper .bottom__container .bottom__wrapper .image__container2 {
+  display: flex;
+  justify-content: flex-end;
+}
+.excerpts .wrapper .bottom__container .top__wrapper .text__container, .excerpts .wrapper .bottom__container .bottom__wrapper .text__container {
+  padding: 2.5rem 1.8rem;
+  flex-basis: 50%;
+}
+@media (max-width: 756px) {
+  .excerpts .wrapper .bottom__container .top__wrapper .text__container, .excerpts .wrapper .bottom__container .bottom__wrapper .text__container {
+    padding: 1.5rem 0.8rem;
+  }
+}
+@media (max-width: 598px) {
+  .excerpts .wrapper .bottom__container .top__wrapper .text__container, .excerpts .wrapper .bottom__container .bottom__wrapper .text__container {
+    flex-basis: 49%;
+  }
+}
+.excerpts .wrapper .bottom__container .top__wrapper .text__container--heading, .excerpts .wrapper .bottom__container .bottom__wrapper .text__container--heading {
+  font-size: clamp(1rem, 2.5vw, 5.7rem);
+  text-transform: uppercase;
+  font-family: epilogue;
+  margin-bottom: 6rem;
+}
+@media (max-width: 756px) {
+  .excerpts .wrapper .bottom__container .top__wrapper .text__container--heading, .excerpts .wrapper .bottom__container .bottom__wrapper .text__container--heading {
+    margin-bottom: 3rem;
+  }
+}
+.excerpts .wrapper .bottom__container .top__wrapper .text__container--paragraph, .excerpts .wrapper .bottom__container .bottom__wrapper .text__container--paragraph {
+  font-size: clamp(0.8rem, 1.7vw, 5rem);
+  text-transform: uppercase;
+  font-family: crimson-pro;
+}
+.excerpts .wrapper .bottom__container .top__wrapper .text__container1, .excerpts .wrapper .bottom__container .bottom__wrapper .text__container1 {
+  background-color: var(--yellow);
+  transform: translateX(10%) rotate(20deg);
+}
+.excerpts .wrapper .bottom__container .top__wrapper .text__container2, .excerpts .wrapper .bottom__container .bottom__wrapper .text__container2 {
+  background-color: var(--cyan);
+  transform: rotate(1.5deg);
+}
+.excerpts .wrapper .bottom__container .top__wrapper .text__container3, .excerpts .wrapper .bottom__container .bottom__wrapper .text__container3 {
+  background-color: var(--green);
+  transform: translateY(-25%) rotate(-10deg);
+}
+.excerpts .wrapper .bottom__container .top__wrapper .text__container4, .excerpts .wrapper .bottom__container .bottom__wrapper .text__container4 {
+  background-color: var(--red);
+  transform: rotate(-6deg);
+}
+
 /*# sourceMappingURL=main.css.map */
