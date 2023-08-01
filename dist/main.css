@@ -63,7 +63,7 @@
   width: 100vw;
   height: 100vh;
   display: flex;
-  z-index: 2;
+  z-index: -1;
 }
 .preloader__block {
   width: 25vw;
@@ -986,6 +986,108 @@
   white-space: pre-wrap;
   text-align: left;
   flex-basis: 41%;
+}
+
+.news {
+  min-height: 120vh;
+  padding: 3rem 0 0 1rem;
+  overflow-x: hidden;
+}
+@media (max-width: 460px) {
+  .news {
+    padding: 3rem 0 0 0.5rem;
+  }
+}
+.news .top__container {
+  width: 100%;
+}
+.news .top__container--heading {
+  font-size: clamp(0.55rem, 6.3vw, 9rem);
+  font-family: cabinet-grotesk;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--black);
+  line-height: 1;
+}
+.news .bottom__container {
+  margin: 4rem 0 3rem;
+  width: 150vw;
+}
+@media (max-width: 700px) {
+  .news .bottom__container {
+    width: 174vw;
+  }
+}
+@media (max-width: 542px) {
+  .news .bottom__container {
+    width: 252vw;
+    margin: 4rem 0 0;
+  }
+}
+@media (max-width: 366px) {
+  .news .bottom__container {
+    width: 288vw;
+  }
+}
+.news .bottom__container .scroller {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.news .bottom__container .scroller .news__container {
+  width: 25vw;
+  margin-right: 1.5rem;
+  text-transform: uppercase;
+}
+@media (max-width: 700px) {
+  .news .bottom__container .scroller .news__container {
+    width: 29vw;
+  }
+}
+@media (max-width: 542px) {
+  .news .bottom__container .scroller .news__container {
+    width: 42vw;
+  }
+}
+@media (max-width: 366px) {
+  .news .bottom__container .scroller .news__container {
+    width: 48vw;
+  }
+}
+.news .bottom__container .scroller .news__container .category {
+  margin-bottom: 0.8rem;
+  font-size: clamp(0.65rem, 1.3vw, 3rem);
+  font-family: crimson-pro;
+}
+@media (max-width: 682px) {
+  .news .bottom__container .scroller .news__container .category {
+    margin-bottom: 0.4rem;
+  }
+}
+.news .bottom__container .scroller .news__container .image__container {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+@media (max-width: 682px) {
+  .news .bottom__container .scroller .news__container .image__container {
+    margin-bottom: 0.2rem;
+  }
+}
+.news .bottom__container .scroller .news__container .image__container img {
+  width: 100%;
+  object-fit: cover;
+}
+.news .bottom__container .scroller .news__container .link {
+  text-decoration: none;
+  color: var(--black);
+  font-family: epilogue;
+  font-size: clamp(0.7rem, 1.8vw, 4rem);
+  line-height: 1.1;
+}
+.news .bottom__container .scroller .news__container .date {
+  margin-top: 0.7rem;
+  font-family: cabinet-grotesk;
+  font-size: clamp(0.55rem, 1.1vw, 1.1rem);
 }
 
 /*# sourceMappingURL=main.css.map */

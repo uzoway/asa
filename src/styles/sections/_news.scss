@@ -1,0 +1,106 @@
+@use "../config/config" as *;
+
+
+.news {
+    min-height: 120vh;
+    padding: 3rem 0 0 1rem;
+    overflow-x: hidden;
+
+    @media (max-width: 460px) {
+        padding: 3rem 0 0 .5rem;
+    }
+
+    .top__container {
+        width: 100%;
+
+        &--heading {
+            font-size: clamp(.55rem, 6.3vw, 9rem);
+            font-family: cabinet-grotesk;
+            text-transform: uppercase;
+            white-space: nowrap; 
+            color: var(--black);
+            line-height: 1;
+        }
+    }
+
+    .bottom__container {
+        margin: 4rem 0 3rem;
+        width: 150vw;
+
+        @media (max-width: 700px) {
+            width: 174vw;
+        }
+
+        @media (max-width: 542px) {
+            width: 252vw;
+            margin: 4rem 0 0;
+        }
+
+        @media (max-width: 366px) {
+            width: 288vw;
+        }
+
+        .scroller {
+            @include flex-content(flex, null, center);
+            width: 100%;
+
+            .news__container {
+                width: 25vw;
+                margin-right: 1.5rem;
+                text-transform: uppercase;
+
+                @media (max-width: 700px) {
+                    width: 29vw;
+                }
+
+                @media (max-width: 542px) {
+                    width: 42vw;
+                }
+
+                @media (max-width: 366px) {
+                    width: 48vw;
+                }
+    
+                .category {
+                    margin-bottom: .8rem;
+                    font-size: clamp(.65rem, 1.3vw, 3rem);
+                    font-family: crimson-pro;
+
+                    @media (max-width: 682px) {
+                        margin-bottom: .4rem;
+                    }
+                }
+    
+                .image__container {
+                    margin-bottom: 1rem;
+                    width: 100%;
+
+                    @media (max-width: 682px) {
+                        margin-bottom: .2rem;
+                    }
+    
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+    
+                .link {
+                    text-decoration: none;
+                    color: var(--black);
+                    font-family: epilogue;
+                    font-size: clamp(.7rem, 1.8vw, 4rem);
+                    line-height: 1.1;
+                }
+    
+                .date {
+                    margin-top: .7rem;
+                    font-family: cabinet-grotesk;
+                    font-size: clamp(.55rem, 1.1vw, 1.1rem);
+                }
+            }
+        }
+
+        
+    }
+}
