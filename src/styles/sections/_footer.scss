@@ -1,0 +1,138 @@
+@use "../config/config" as *;
+
+.footer {
+    padding: 2rem 1rem;
+
+    &__link {
+        width: 100%;
+        background-color: var(--black);
+        padding: 2.5rem 3rem;
+        @include flex-content(flex, center, center);
+        border-radius: 3rem;
+        text-decoration: none;
+        color: var(--white);
+        text-transform: uppercase;
+        font-family: cabinet-grotesk;
+        font-size: clamp(1rem, 3.5vw, 9rem);
+        font-weight: 400;
+
+
+
+        img {
+            margin-left: .5rem;
+
+            @media (max-width: 934px) {
+                width: 2.5rem;
+            }
+
+            @media (max-width: 314px) {
+                width: 1.8rem;
+            }
+        }
+    }
+
+    .navigation {
+        margin-top: 6rem;
+        @include flex-content(flex, space-between, null);
+
+        @media (max-width: 678px) {
+            flex-wrap: wrap;
+        }
+
+        .column1, .column4  {
+            flex-basis: 25%;
+
+            @media (max-width: 678px) {
+                flex-basis: 50%;
+            }
+
+            @media (max-width: 398px) {
+                flex-basis: 100%;
+            }
+        }
+
+        .column2, .column3  {
+            flex-basis: 12.5%;
+
+            @media (max-width: 678px) {
+                flex-basis: 50%;
+            }
+
+            @media (max-width: 398px) {
+                flex-basis: 100%;
+            }
+        }
+
+        .column .column__heading {
+            margin-bottom: 1.5rem;
+            font-family: cabinet-grotesk;
+            font-size: clamp(1rem, 1.4vw, 2rem);
+        }
+
+        .column1 .column__list {
+            @include flex-content(flex, null, center);
+
+            li {
+                list-style: none;
+                margin-right: .5rem;
+
+                img {
+                    width: 1.5rem;
+                }
+            }
+        }
+
+        .column2 .column__list--item, .column3 .column__list--item {
+            list-style: none;
+            margin-bottom: .5rem;
+
+            a {
+                text-decoration: none;
+                text-transform: uppercase;
+                color: var(--black);
+                font-family: cabinet-grotesk;
+                position: relative;
+                font-size: clamp(.9rem, 1.3vw, 1rem);
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0%;
+                    height: 1px;
+                    background-color: var(--black);
+                    transition: .2s ease-in-out;
+                }
+
+                &:hover::before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .column4 {
+            @include flex-content(flex, null, flex-end);
+            flex-direction: column;
+
+            img {
+                width: 2.5rem;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                font-family: crimson-pro;
+                font-size: clamp(1rem, 1.3vw, 1rem);
+                text-transform: uppercase;
+            }
+        }
+
+        @media (max-width: 678px) {
+            .column2 {
+                @include flex-content(flex, null, flex-end);
+                flex-direction: column;
+                text-align: right;
+            }
+        }
+    }
+}
