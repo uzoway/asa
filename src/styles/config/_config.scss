@@ -1,15 +1,5 @@
 // mixins
 
-@mixin linkPseudo-style {
-    position: absolute;
-    content: "";
-    width: 0%;
-    height: 1px;
-    background-color: var(--white);
-    bottom: 0;
-    transition: .25s ease-out;
-}
-
 @mixin flex-content ($flex, $justify-content, $align-items) {
     @if $flex != null {
         display: $flex;
