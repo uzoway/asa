@@ -12,7 +12,6 @@
 
     & .top__container {
         max-width: 85%;
-        // background-color: red;
 
         @media (max-width: 716px) {
             max-width: 100%;
@@ -21,7 +20,6 @@
         .line__container {
             text-transform: uppercase;
             font-family: epilogue;
-            // background-color: rgb(201, 109, 109);
             margin: .3rem 0;
             overflow: hidden;
 
@@ -33,7 +31,6 @@
                 @include flex-content(flex, null, flex-start);
                 white-space: nowrap;
                 overflow: hidden;
-                // background-color: red;
 
                 .image__container {
                     width: clamp(1.8rem, 7vw, 6rem);
@@ -89,7 +86,6 @@
 
             .line__container {
                 overflow: hidden;
-                // background-color: red;
                 margin: .3rem 0;
 
                 @media (max-width: 652px) {
@@ -144,6 +140,7 @@
 
         .second__section--leftImage {
             width: 60%;
+            overflow: hidden;
 
             img {
                 max-width: 100%;
@@ -156,6 +153,7 @@
             position: absolute;
             right: 0;
             top: 0;
+            overflow: hidden;
 
             img {
                 max-width: 100%;
@@ -164,33 +162,34 @@
         }
     }
 
+    &--paragraph {
+        display: flex;
+    }
+
     .line__container {
         text-transform: uppercase;
         font-family: epilogue;
-        // background-color: red;
         overflow: hidden;
         padding: 0 1rem;
 
-        @media (max-width: 724px) {
-            padding: 0 1rem;
-        }
-
-        .intro__text {
-            text-transform: capitalize;
-            margin-right: 1.5rem;
-            font-family: crimson-pro;
-            font-size: clamp(.8rem, 1vw, 1rem);
-
-            @media (max-width: 480px) {
-                margin-right: .7rem;
-            }
-        }
-
-        &--text {
+        .anim__aboutPara {
             font-size: clamp(.85rem, 5vw, 7rem);
-            line-height: 1;
-            padding-top: 1rem;
+            line-height: .75;
+            padding-top: .7rem;
             white-space: nowrap;
+            display: inline-block;
+
+
+            .intro__text {
+                text-transform: capitalize;
+                margin-right: 1.5rem;
+                font-family: crimson-pro;
+                font-size: clamp(.8rem, 1.4vw, 1.2rem);
+    
+                @media (max-width: 480px) {
+                    margin-right: .7rem;
+                }
+            }
 
             @media (max-width: 634px) {
                 font-size: clamp(.65rem, 4.8vw, 6.8rem);
@@ -202,7 +201,6 @@
 
 .third__section {
     min-height: 95vh;
-    // background-color: rgb(4, 70, 52);
     @include flex-content(flex, space-between, null);
     padding: 0 1rem;
     margin: 12rem 0 4rem;
@@ -227,6 +225,7 @@
         flex-basis: 40%;
         background-color: rgb(247, 242, 242);
         @include flex-content(flex, flex-end, null);
+        overflow: hidden;
 
         @media (max-width: 1070px) {
             flex-basis: 50%;
@@ -237,10 +236,12 @@
             margin-top: 1rem;
         }
 
-        img {
+        .about__image {
             max-width: 100%;
             object-fit: cover;
             height: 100%;
+            transform: scale(1);
+            color: rgb(128, 128, 128);
         }
     }
 
@@ -267,22 +268,27 @@
         }
 
         .bottom__container {
+
+            &--heading {
+                display: flex;
+            }
+
             .line__container {
-                // background-color: red;
                 margin: .2rem 0;
                 text-transform: uppercase;
                 overflow: hidden;
 
-                &--text {
+                .bottom__paragraph {
                     font-size: clamp(.9rem, 2.8vw, 6rem);
                     font-family: epilogue;
                     font-weight: 500;
                     line-height: 1;
                     overflow: hidden;
                     white-space: nowrap;
+                    display: inline-block;
+                    transform: translateY(0%);
 
                     .name {
-                        // font-size: clamp(2rem, 3.5vw, 7.5rem);
                         font-size: clamp(1rem, 3.2vw, 6rem);
                         font-family: crimson-pro;
                         white-space: nowrap;
@@ -301,5 +307,10 @@
                 margin-top: 2rem;
             }
         }
+    }
+
+    .right__container--image {
+        overflow: hidden;
+        position: relative;
     }
 }
