@@ -24,8 +24,8 @@
         </div>
 
         <!-- Hero section -->
-        <div class="hero">
-            <img class="hero__bgImage cld-responsive img-responsive" fetchpriority="high" data-src="https://res.cloudinary.com/dp20bvzhn/image/upload/q_auto:best,f_auto,w_auto,dpr_auto,c_limit/e_contrast:0/v1686335126/asa/Rectangle_1_cwocbk.webp" alt="picture of asa used as the background image">
+        <div class="hero right__container--image">
+            <img class="hero__bgImage about__image cld-responsive img-responsive" fetchpriority="high" data-src="https://res.cloudinary.com/dp20bvzhn/image/upload/q_auto:best,f_auto,w_auto,dpr_auto,c_limit/e_contrast:0/v1686335126/asa/Rectangle_1_cwocbk.webp" alt="picture of asa used as the background image">
             
             <nav class="hero__navigation">
                 <a href="#" class="hero__navigation--logoLink"><img class="hero__navigation--logoImage" src="https://res.cloudinary.com/dp20bvzhn/image/upload/v1686335116/asa/Assa_logo_bigg_zybysn.webp" alt="asa logo"></a>
@@ -157,27 +157,26 @@
             </div>
 
             <div class="second__section">
-                <div class="wrapper">
-                    <div class="second__section--leftImage">
-                        <img src="https://res.cloudinary.com/dp20bvzhn/image/upload/v1686335055/asa/Rectangle_5_qn3a4s.webp" alt="image of asa with a mic performing on stage">
+                <div class="anim__imageCont wrapper">
+                    <div class="second__section--leftImage right__container--image">
+                        <img class="about__image" src="https://res.cloudinary.com/dp20bvzhn/image/upload/v1686335055/asa/Rectangle_5_qn3a4s.webp" alt="image of asa with a mic performing on stage">
                     </div>
-                    <div class="second__section--rightImage">
-                        <img src="https://res.cloudinary.com/dp20bvzhn/image/upload/v1686335048/asa/Rectangle_6_vqdthx.webp" alt="image of asa on stage">
+                    <div class="second__section--rightImage right__container--image">
+                        <img class="about__image" src="https://res.cloudinary.com/dp20bvzhn/image/upload/v1686335048/asa/Rectangle_6_vqdthx.webp" alt="image of asa on stage">
                     </div>
                 </div>
                 <p class="second__section--paragraph">
                     <div class="line__container">
-                        <span class="intro__text">Inspiration</span>
-                        <span class="line__container--text">asa is influenced by</span>
+                        <span class="anim__aboutPara"><span class="intro__text">Inspiration</span>asa is influenced by</span>
                     </div>
                     <div class="line__container">
-                        <span class="line__container--text">collection of her father's work music</span>
+                        <span class="anim__aboutPara">collection of her father's work music</span>
                     </div>
                     <div class="line__container">
-                        <span class="line__container--text">featuring the likes of aretha franklin,</span>
+                        <span class="anim__aboutPara">featuring the likes of aretha franklin,</span>
                     </div>
                     <div class="line__container">
-                        <span class="line__container--text">bob marley & fela kuti</span>
+                        <span class="anim__aboutPara">bob marley & fela kuti</span>
                     </div>
                 </p>
             </div>
@@ -193,19 +192,19 @@
                         </div>
                     </div>
 
-                    <div class="bottom__container">
+                    <div class="bottom__container bottom__paragraph--container">
                         <p class="bottom__container--heading">
                             <div class="line__container">
-                                <span class="line__container--text">her stage name asa, meaning</span>
+                                <span class="bottom__paragraph">her stage name asa, meaning</span>
                             </div>
                             <div class="line__container">
-                                <span class="line__container--text line__container--text2"><span class="name">'hawk'</span> was inspired when she</span>
+                                <span class="bottom__paragraph line__container--text2"><span class="name">'hawk'</span> was inspired when she</span>
                             </div>
                             <div class="line__container">
-                                <span class="line__container--text">was a youngster and would</span>
+                                <span class="bottom__paragraph">was a youngster and would</span>
                             </div>
                             <div class="line__container">
-                                <span class="line__container--text">runaway from home</span>
+                                <span class="bottom__paragraph">runaway from home</span>
                             </div>
                         </p>
 
@@ -215,8 +214,8 @@
                     </div>
                 </div>
 
-                <div class="right__container">
-                    <img class="cld-responsive img-responsive" src="https://res.cloudinary.com/dp20bvzhn/image/upload/v1686334105/asa/Rectangle_25_zg8mbu.webp" alt="image of asa in a garden">
+                <div class="right__container right__container--image">
+                    <img class="cld-responsive img-responsive about__image" src="https://res.cloudinary.com/dp20bvzhn/image/upload/v1686334105/asa/Rectangle_25_zg8mbu.webp" alt="image of asa in a garden">
                 </div>
             </div>
         </div>
@@ -303,10 +302,16 @@
         <!-- Tickets -->
         <div class="tickets">
             <div class="wrapper">
-                <p class="wrapper__paragraph">6 appearances, 3 countries</p>
+                <p class="wrapper__paragraph">
+                    <span class="tickets__text text">
+                        6 appearances, 3 countries
+                    </span> 
+                </p>
 
                 <table>
-                    <caption class="table__caption">show tickets <span>&</span> appearances</caption>
+                    <caption class="table__caption">
+                        <div class="tickets__text text">show tickets <span>&</span> appearances</div>
+                    </caption>
 
                     <tbody>
                         <tr>
@@ -474,7 +479,9 @@
     <!-- GSAP core, Flip, scrolltrigger and text plugin CDN  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/Flip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/CustomEase.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/TextPlugin.min.js"></script>
 
     <!-- Script file for JS -->
