@@ -33,7 +33,7 @@
 
         @media (max-width: 542px) {
             width: 252vw;
-            margin: 4rem 0 0;
+            margin: 4rem 0 3rem;
         }
 
         @media (max-width: 366px) {
@@ -43,6 +43,7 @@
         .scroller {
             @include flex-content(flex, null, center);
             width: 100%;
+            overflow-y: hidden;
 
             .news__container {
                 width: 25vw;
